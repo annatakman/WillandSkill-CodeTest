@@ -23,6 +23,8 @@ const Card = styled.article`
 const Image = styled.img`
   display: block;
   width: 100%;
+  height: 40vh;
+  object-fit: cover;
 `
 
 const Text = styled.div`
@@ -39,10 +41,6 @@ const Text = styled.div`
 
   h1 {
     font-size: 24px;
-  }
-
-  h2 {
-    font-size: 18px;
   }
 `
 
@@ -65,11 +63,10 @@ export const FlowerList = () => {
     <Container>
       {filteredFlowers.map((flower, index) => (
         <Card key={flower.common_name}>
-          <Link to={`/flowers/[${index}]`}>
+          <Link to={`/flowers/${index}`}>
             <Image src={flower.cover_image} alt={flower.common_name} />
             <Text >
               <h1>{flower.common_name}</h1>
-              <h2>{flower.latin_name}</h2>
             </Text>
           </Link>
         </Card>
