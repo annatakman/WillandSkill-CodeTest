@@ -67,7 +67,7 @@ export const FlowerList = () => {
   )
 
   // Since I used a filter-function and since the API is built so that you navigate to the individual flowers
-  // using their array index, I made the forEach-function above in the fetch to make sure yhat every item 
+  // using their array index, I made the forEach-function above in the fetch to make sure that every item 
   // keeps its original index. Otherwise the navigation wouldn't work correctly.
 
     return(
